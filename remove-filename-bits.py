@@ -57,5 +57,6 @@ else:
     logfile = open("RENAME.log","a")
     logfile.write("\nremove-filename-bits.py vers {0} - {1}".format(vers,datetime.datetime.now()))
     for i in commandlist:
+        print i
         os.system(i)
-        logfile.write('\n{0} --> {1}'.format(i.split()[1],i.split[2]))
+        logfile.write('\n{0} --> {1}'.format(i.split()[1],i.split()[2]))

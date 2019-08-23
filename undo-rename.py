@@ -11,7 +11,7 @@ vers = 0.1
 rendata = open('RENAME.log','r').readlines()
 splits = []
 for i in rendata[1:]:
-    if "rename utility" in i:
+    if "rename utility" in i or "remove-filename-bits" in i:
         splits.append((i.replace('\n',''),rendata.index(i)))
 splits.append(('last',len(rendata)))
 
