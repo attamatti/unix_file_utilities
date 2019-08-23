@@ -54,8 +54,8 @@ doit = raw_input('do it (y/n) ? ')
 if doit not in ['y','Y','Yes','YES','yes']:
     sys.exit("User quit: Goodbye")
 else:
-    logfile = open("REMOVEBITS.log","a")
+    logfile = open("RENAME.log","a")
     logfile.write("\nremove-filename-bits.py vers {0} - {1}".format(vers,datetime.datetime.now()))
     for i in commandlist:
         os.system(i)
-        logfile.write('\n{0}'.format(i))
+        logfile.write('\n{0} --> {1}'.format(i.split()[1],i.split[2]))
